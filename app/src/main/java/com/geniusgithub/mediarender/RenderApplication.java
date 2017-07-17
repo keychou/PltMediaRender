@@ -7,7 +7,7 @@ import android.content.Context;
 import com.geniusgithub.mediarender.util.CommonLog;
 import com.geniusgithub.mediarender.util.LogFactory;
 import com.tendcloud.tenddata.TCAgent;
-import com.umeng.analytics.MobclickAgent;
+
 
 import java.util.HashMap;
 
@@ -34,7 +34,7 @@ public class RenderApplication  extends Application implements ItatisticsEvent{
 		  TCAgent.init(this);
 		  TCAgent.setReportUncaughtExceptions(true);
 
-		MobclickAgent.setDebugMode(true);
+
 	}
 
 	public void updateDevInfo(String name, String uuid){
@@ -64,12 +64,12 @@ public class RenderApplication  extends Application implements ItatisticsEvent{
 	}
 	
 	public static void onPause(Activity context){
-		MobclickAgent.onResume(context);
+
 		TCAgent.onPause(context);
 	}
 	
 	public static void onResume(Activity context){
-		MobclickAgent.onResume(context);
+
 		TCAgent.onResume(context);
 	}
 	
